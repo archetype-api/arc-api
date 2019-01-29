@@ -18,6 +18,9 @@ import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 import Button from "@material-ui/core/Button";
+import GetAll from "../../components/GetAll";
+import GetOne from "../../components/GetOne";
+import GetRandom from "../../components/GetRandom";
 
 const drawerWidth = 300;
 
@@ -125,7 +128,7 @@ class Main extends React.Component {
         <Button
           key={i}
           onClick={() => this.props.switchTheme(e)}
-          variant="raised"
+          variant="contained"
           color="primary"
         >
           {e}
@@ -151,8 +154,8 @@ class Main extends React.Component {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h5" color="inherit" noWrap>
-              Archetype API
+            <Typography variant="headline" color="inherit" noWrap>
+              Arc API
             </Typography>
           </Toolbar>
         </AppBar>
@@ -204,6 +207,9 @@ class Main extends React.Component {
         >
           <div className={classes.drawerHeader} />
           {buttonDisplay}
+          <GetAll />
+          <GetOne />
+          <GetRandom />
         </main>
       </div>
     );
