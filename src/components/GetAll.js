@@ -7,6 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import axios from "axios";
 import Example from "./Example";
+import Button from "@material-ui/core/Button";
 
 const styles = theme => ({
   root: {
@@ -45,7 +46,11 @@ class GetAll extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <Typography variant="display2" className={classes.title}>
+        <Typography
+          variant="display2"
+          color="primary"
+          className={classes.title}
+        >
           Get All
         </Typography>
         <ExpansionPanel>

@@ -207,9 +207,9 @@ class Main extends React.Component {
         >
           <div className={classes.drawerHeader} />
           {buttonDisplay}
-          <GetAll />
-          <GetOne />
-          <GetRandom />
+          <GetAll theme={this.props.theme} />
+          <GetOne theme={this.props.theme} />
+          <GetRandom theme={this.props.theme} />
         </main>
       </div>
     );

@@ -5,6 +5,7 @@ const dual = require("./dual");
 const single = require("./single");
 const compare = require("./compare");
 const drama = require("./drama");
+const random = require("./random");
 
 const app = express();
 app.use(json());
@@ -23,7 +24,7 @@ app.get("/api/types", single.allTypes);
 
 app.get("/api/types/name/:name", single.byName);
 
-app.get('/api/types/role/:role', single.byRole);
+app.get("/api/types/role/:role", single.byRole);
 
 app.get("/api/types/aspect/:aspect", single.byAspect);
 
@@ -32,6 +33,8 @@ app.get("/api/types/drive/:drive", single.byDrive);
 app.get("/api/types/method/:method", single.byMethod);
 
 app.get("/api/types/shadow/:shadow", single.byShadow);
+
+app.get("/api/types/random", random.random);
 
 // Two layer queries || DUAL QUERIES
 
