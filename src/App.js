@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./styles/App.css";
 import Main from "./components/layout/Main";
-import { MuiThemeProvider } from "@material-ui/core";
+import { MuiThemeProvider, CssBaseline } from "@material-ui/core";
 import {
   Caregiver,
   Creator,
