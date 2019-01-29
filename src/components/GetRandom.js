@@ -31,7 +31,7 @@ class GetRandom extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <Typography variant="h3" className={classes.title}>
+        <Typography variant="display2" className={classes.title}>
           Get Random
         </Typography>
         <ExpansionPanel>

@@ -128,7 +128,7 @@ class Main extends React.Component {
         <Button
           key={i}
           onClick={() => this.props.switchTheme(e)}
-          variant="raised"
+          variant="contained"
           color="primary"
         >
           {e}
@@ -154,7 +154,7 @@ class Main extends React.Component {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h5" color="inherit" noWrap>
+            <Typography variant="headline" color="inherit" noWrap>
               Arc API
             </Typography>
           </Toolbar>
