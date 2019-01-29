@@ -2,6 +2,7 @@ import { createMuiTheme } from "@material-ui/core";
 
 export const Caregiver = createMuiTheme({
   palette: {
+    type: "dark",
     primary: {
       dark: "#a84632",
       main: "#f16548",
@@ -12,6 +13,7 @@ export const Caregiver = createMuiTheme({
 
 export const Creator = createMuiTheme({
   palette: {
+    type: "dark",
     primary: {
       dark: "#ac6613",
       main: "#f7921c",
@@ -22,6 +24,7 @@ export const Creator = createMuiTheme({
 
 export const Explorer = createMuiTheme({
   palette: {
+    type: "dark",
     primary: {
       dark: "#5a5b20",
       main: "#81822e",
@@ -32,6 +35,7 @@ export const Explorer = createMuiTheme({
 
 export const Hero = createMuiTheme({
   palette: {
+    type: "dark",
     primary: {
       dark: "#004877",
       main: "#0067ab",
@@ -42,6 +46,7 @@ export const Hero = createMuiTheme({
 
 export const Innocent = createMuiTheme({
   palette: {
+    type: "dark",
     primary: {
       dark: "#007a9a",
       main: "#00afdd",
@@ -52,6 +57,7 @@ export const Innocent = createMuiTheme({
 
 export const Jester = createMuiTheme({
   palette: {
+    type: "dark",
     primary: {
       dark: "#738f27",
       main: "#a5cd39",
@@ -62,6 +68,7 @@ export const Jester = createMuiTheme({
 
 export const Lover = createMuiTheme({
   palette: {
+    type: "dark",
     primary: {
       dark: "#971f48",
       main: "#d92d68",
@@ -72,6 +79,7 @@ export const Lover = createMuiTheme({
 
 export const Magician = createMuiTheme({
   palette: {
+    type: "dark",
     primary: {
       dark: "#651a63",
       main: "#91268e",
@@ -82,6 +90,7 @@ export const Magician = createMuiTheme({
 
 export const Everyperson = createMuiTheme({
   palette: {
+    type: "dark",
     primary: {
       dark: "#006369",
       main: "#008e97",
@@ -92,6 +101,7 @@ export const Everyperson = createMuiTheme({
 
 export const Revolutionary = createMuiTheme({
   palette: {
+    type: "dark",
     primary: {
       dark: "#8f1b27",
       main: "#cd2738",
@@ -102,6 +112,7 @@ export const Revolutionary = createMuiTheme({
 
 export const Ruler = createMuiTheme({
   palette: {
+    type: "dark",
     primary: {
       dark: "#a18005",
       main: "#e7b708",
@@ -112,6 +123,7 @@ export const Ruler = createMuiTheme({
 
 export const Sage = createMuiTheme({
   palette: {
+    type: "dark",
     primary: {
       dark: "#5a331e",
       main: "#81492c",
