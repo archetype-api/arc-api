@@ -153,8 +153,8 @@ const wheel = {
 const allyMatrix = {
 	'leave a mark': 'order',
 	order: 'leave a mark',
-	'connect to others': 'spiritual journey',
-	'spiritual journey': 'connect to others'
+	'connect with others': 'spiritual journey',
+	'spiritual journey': 'connect with others'
 };
 
 const drama = [
