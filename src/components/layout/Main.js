@@ -24,6 +24,7 @@ import GetRandom from "../../components/GetRandom";
 // import Images from "../Images";
 import { types } from "../../styles/colors";
 import git from "../../images/github.png";
+import Intro from "../Intro";
 
 const drawerWidth = 300;
 
@@ -167,7 +168,7 @@ class Main extends React.Component {
               <MenuIcon />
             </IconButton>
             <Typography variant="headline" color="inherit" noWrap>
-              Arc API
+              Arc Api
             </Typography>
 
             <a
@@ -230,8 +231,9 @@ class Main extends React.Component {
           })}
         >
           <div className={classes.drawerHeader} />
-          {buttonDisplay}
           {/* <Images /> not ready */}
+          <Intro />
+          {buttonDisplay}
           <GetAll theme={this.props.theme} />
           <GetOne theme={this.props.theme} />
           <GetRandom theme={this.props.theme} />

@@ -15,7 +15,7 @@ const styles = theme => ({
     padding: theme.spacing.unit * 3
   },
   title: {
-    padding: theme.spacing.unit * 3
+    padding: theme.spacing.unit
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
