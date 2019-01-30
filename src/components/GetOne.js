@@ -57,11 +57,19 @@ class GetOne extends Component {
 						<Typography className={classes.heading}>Description</Typography>
 					</ExpansionPanelSummary>
 					<ExpansionPanelDetails>
-						<Typography>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-							eget.
-						</Typography>
+						{this.state.data.types && (
+							<Typography>
+								The {this.state.data.types.hero.name} is driven to{' '}
+								{this.state.data.types.hero.drive}. He/she accomplishes this
+								through the method of {this.state.data.types.hero.method}.
+								His/her role is that of the {this.state.data.types.hero.role}{' '}
+								and his/her story represents the aspect of the{' '}
+								{this.state.data.types.hero.aspect}. The{' '}
+								{this.state.data.types.hero.name}, also known as{' '}
+								{this.state.data.types.hero.alias}, must be careful of falling
+								into their shadow and {this.state.data.types.hero.shadow}.
+							</Typography>
+						)}
 					</ExpansionPanelDetails>
 				</ExpansionPanel>
 				<ExpansionPanel>
