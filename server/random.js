@@ -6,7 +6,7 @@ const getRandomInt = int => {
 
 module.exports = {
   random: (req, res, next) => {
-    let id = getRandomInt(11);
+    let id = getRandomInt(12);
     id += 1;
     let random = db.types.filter((e, i) => {
       return e.archetype_id === id;

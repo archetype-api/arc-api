@@ -21,6 +21,8 @@ import Button from "@material-ui/core/Button";
 import GetAll from "../../components/GetAll";
 import GetOne from "../../components/GetOne";
 import GetRandom from "../../components/GetRandom";
+// import Images from "../Images";
+import { types } from "../../styles/colors";
 
 const drawerWidth = 300;
 
@@ -78,6 +80,12 @@ const styles = theme => ({
       duration: theme.transitions.duration.enteringScreen
     }),
     marginLeft: 0
+  },
+  button: {
+    margin: theme.spacing.unit / 3
+  },
+  caregiver: {
+    background: "#f16548"
   }
 });
 
@@ -95,20 +103,6 @@ class Main extends React.Component {
       "Get Random",
       "Get Dual",
       "Get Scenario"
-    ],
-    types: [
-      "Caregiver",
-      "Creator",
-      "Explorer",
-      "Hero",
-      "Innocent",
-      "Jester",
-      "Lover",
-      "Magician",
-      "Everyperson",
-      "Revolutionary",
-      "Ruler",
-      "Sage"
     ]
   };
 
@@ -122,16 +116,17 @@ class Main extends React.Component {
 
   render() {
     const { classes, theme } = this.props;
-    const { open, types } = this.state;
+    const { open } = this.state;
     let buttonDisplay = types.map((e, i) => {
       return (
         <Button
           key={i}
-          onClick={() => this.props.switchTheme(e)}
+          onClick={() => this.props.switchTheme(e.name)}
           variant="contained"
-          color="primary"
+          style={e.style}
+          className={classes.button}
         >
-          {e}
+          {e.name}
         </Button>
       );
     });
@@ -207,6 +202,7 @@ class Main extends React.Component {
         >
           <div className={classes.drawerHeader} />
           {buttonDisplay}
+          {/* <Images /> not ready */}
           <GetAll theme={this.props.theme} />
           <GetOne theme={this.props.theme} />
           <GetRandom theme={this.props.theme} />
