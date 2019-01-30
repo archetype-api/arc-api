@@ -15,7 +15,7 @@ const styles = theme => ({
     padding: theme.spacing.unit * 3
   },
   title: {
-    padding: theme.spacing.unit * 3
+    padding: theme.spacing.unit
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
@@ -48,11 +48,7 @@ class GetRandom extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <Typography
-          variant="display2"
-          color="primary"
-          className={classes.title}
-        >
+        <Typography variant="h3" color="primary" className={classes.title}>
           Get Random
           <Button
             variant="contained"
@@ -80,9 +76,7 @@ class GetRandom extends Component {
             <Typography className={classes.heading}>Example</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            <Typography>
-              <Example data={this.state.data} />
-            </Typography>
+            <Example data={this.state.data} />
           </ExpansionPanelDetails>
         </ExpansionPanel>
       </div>

@@ -23,6 +23,9 @@ import GetOne from "../../components/GetOne";
 import GetRandom from "../../components/GetRandom";
 // import Images from "../Images";
 import { types } from "../../styles/colors";
+import git from "../../images/github.png";
+import Intro from "../Intro";
+import swordblack from "../../images/swordblack.png";
 
 const drawerWidth = 300;
 
@@ -86,6 +89,27 @@ const styles = theme => ({
   },
   caregiver: {
     background: "#f16548"
+  },
+  git: {
+    height: "3vw",
+    width: "3vw"
+  },
+  toolbar: {
+    display: "flex",
+    justifyContent: "space-between"
+  },
+  link: {
+    display: "flex",
+    textDecoration: "none"
+  },
+  linktext: {
+    color: "white",
+    padding: theme.spacing.unit
+  },
+  logo: {
+    height: "2vw",
+    width: "2vw",
+    marginRight: "1vw"
   }
 });
 
@@ -140,18 +164,31 @@ class Main extends React.Component {
             [classes.appBarShift]: open
           })}
         >
-          <Toolbar disableGutters={!open}>
-            <IconButton
-              color="inherit"
-              aria-label="Open drawer"
-              onClick={this.handleDrawerOpen}
-              className={classNames(classes.menuButton, open && classes.hide)}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="headline" color="inherit" noWrap>
-              Arc API
+          <Toolbar className={classes.toolbar} disableGutters={!open}>
+            <Typography variant="h5" color="inherit" noWrap>
+              <IconButton
+                color="inherit"
+                aria-label="Open drawer"
+                onClick={this.handleDrawerOpen}
+                className={classNames(classes.menuButton, open && classes.hide)}
+              >
+                <MenuIcon />
+              </IconButton>
+              <img src={swordblack} alt="logo" className={classes.logo} />
+              Arc Api
             </Typography>
+
+            <a
+              href="https://github.com/archetype-api/arc-api"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={classes.link}
+            >
+              <Typography variant="h5" className={classes.linktext}>
+                Find us on Github
+              </Typography>
+              <img src={git} className={classes.git} alt="github" />
+            </a>
           </Toolbar>
         </AppBar>
         <Drawer
@@ -201,8 +238,9 @@ class Main extends React.Component {
           })}
         >
           <div className={classes.drawerHeader} />
-          {buttonDisplay}
           {/* <Images /> not ready */}
+          <Intro />
+          {buttonDisplay}
           <GetAll theme={this.props.theme} />
           <GetOne theme={this.props.theme} />
           <GetRandom theme={this.props.theme} />
