@@ -45,11 +45,7 @@ class GetAll extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <Typography
-          variant="display2"
-          color="primary"
-          className={classes.title}
-        >
+        <Typography variant="h3" color="primary" className={classes.title}>
           Get All
         </Typography>
         <ExpansionPanel>

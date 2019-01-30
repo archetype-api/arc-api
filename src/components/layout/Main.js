@@ -25,6 +25,7 @@ import GetRandom from "../../components/GetRandom";
 import { types } from "../../styles/colors";
 import git from "../../images/github.png";
 import Intro from "../Intro";
+import swordblack from "../../images/swordblack.png";
 
 const drawerWidth = 300;
 
@@ -104,6 +105,11 @@ const styles = theme => ({
   linktext: {
     color: "white",
     padding: theme.spacing.unit
+  },
+  logo: {
+    height: "2vw",
+    width: "2vw",
+    marginRight: "1vw"
   }
 });
 
@@ -159,15 +165,16 @@ class Main extends React.Component {
           })}
         >
           <Toolbar className={classes.toolbar} disableGutters={!open}>
-            <IconButton
-              color="inherit"
-              aria-label="Open drawer"
-              onClick={this.handleDrawerOpen}
-              className={classNames(classes.menuButton, open && classes.hide)}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="headline" color="inherit" noWrap>
+            <Typography variant="h5" color="inherit" noWrap>
+              <IconButton
+                color="inherit"
+                aria-label="Open drawer"
+                onClick={this.handleDrawerOpen}
+                className={classNames(classes.menuButton, open && classes.hide)}
+              >
+                <MenuIcon />
+              </IconButton>
+              <img src={swordblack} alt="logo" className={classes.logo} />
               Arc Api
             </Typography>
 
@@ -177,7 +184,7 @@ class Main extends React.Component {
               rel="noopener noreferrer"
               className={classes.link}
             >
-              <Typography variant="headline" className={classes.linktext}>
+              <Typography variant="h5" className={classes.linktext}>
                 Find us on Github
               </Typography>
               <img src={git} className={classes.git} alt="github" />

@@ -8,6 +8,9 @@ export const Caregiver = createMuiTheme({
       main: "#f16548",
       light: "#f3836c"
     }
+  },
+  typography: {
+    useNextVariants: true
   }
 });
 
@@ -19,6 +22,9 @@ export const Creator = createMuiTheme({
       main: "#f7921c",
       light: "#f8a749"
     }
+  },
+  typography: {
+    useNextVariants: true
   }
 });
 
@@ -30,6 +36,9 @@ export const Explorer = createMuiTheme({
       main: "#81822e",
       light: "#9a9b57"
     }
+  },
+  typography: {
+    useNextVariants: true
   }
 });
 
@@ -41,6 +50,9 @@ export const Hero = createMuiTheme({
       main: "#0067ab",
       light: "#3385bb"
     }
+  },
+  typography: {
+    useNextVariants: true
   }
 });
 
@@ -52,6 +64,9 @@ export const Innocent = createMuiTheme({
       main: "#00afdd",
       light: "#33bfe3"
     }
+  },
+  typography: {
+    useNextVariants: true
   }
 });
 
@@ -63,6 +78,9 @@ export const Jester = createMuiTheme({
       main: "#a5cd39",
       light: "#b7d760"
     }
+  },
+  typography: {
+    useNextVariants: true
   }
 });
 
@@ -74,6 +92,9 @@ export const Lover = createMuiTheme({
       main: "#d92d68",
       light: "#e05786"
     }
+  },
+  typography: {
+    useNextVariants: true
   }
 });
 
@@ -85,6 +106,9 @@ export const Magician = createMuiTheme({
       main: "#91268e",
       light: "#a751a4"
     }
+  },
+  typography: {
+    useNextVariants: true
   }
 });
 
@@ -96,6 +120,9 @@ export const Everyperson = createMuiTheme({
       main: "#008e97",
       light: "#33a4ab"
     }
+  },
+  typography: {
+    useNextVariants: true
   }
 });
 
@@ -107,6 +134,9 @@ export const Revolutionary = createMuiTheme({
       main: "#cd2738",
       light: "#d7525f"
     }
+  },
+  typography: {
+    useNextVariants: true
   }
 });
 
@@ -118,6 +148,9 @@ export const Ruler = createMuiTheme({
       main: "#e7b708",
       light: "#ebc539"
     }
+  },
+  typography: {
+    useNextVariants: true
   }
 });
 
@@ -129,5 +162,8 @@ export const Sage = createMuiTheme({
       main: "#81492c",
       light: "#9a6d56"
     }
+  },
+  typography: {
+    useNextVariants: true
   }
 });
