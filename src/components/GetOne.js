@@ -86,7 +86,10 @@ class GetOne extends Component {
 					</ExpansionPanelSummary>
 					<ExpansionPanelDetails>
 						{this.state.data.types && (
-							<Typography>{this.state.data.types.hero.shadow}</Typography>
+							<Typography>
+								The shadow of the {this.state.data.types.hero.name} is{' '}
+								{this.state.data.types.hero.shadow}
+							</Typography>
 						)}
 					</ExpansionPanelDetails>
 				</ExpansionPanel>
