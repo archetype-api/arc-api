@@ -7,7 +7,6 @@ import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import axios from "axios";
 import Example from "./Example";
-import Button from "@material-ui/core/Button";
 
 const styles = theme => ({
   root: {

@@ -21,7 +21,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      theme: "Innocent"
+      theme: "Everyperson"
     };
   }
 
