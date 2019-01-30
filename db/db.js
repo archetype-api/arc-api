@@ -52,7 +52,7 @@ const types = [
 		method: 'liberation',
 		shadow: 'indiffernce/cruelty',
 		name: 'rebel',
-		alias: 'outlaw',
+		alias: 'outlaw/revolutionary',
 		role: 'outlier',
 		color: 'yellow'
 	},
@@ -129,7 +129,7 @@ const types = [
 		method: 'fitting in',
 		shadow: 'mediocrity',
 		name: 'orphan',
-		alias: 'everyman',
+		alias: 'everyman/everyperson',
 		role: 'student',
 		color: 'purple'
 	}
