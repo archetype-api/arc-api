@@ -14,7 +14,7 @@ const styles = theme => ({
     padding: theme.spacing.unit * 3
   },
   title: {
-    padding: theme.spacing.unit * 3
+    padding: theme.spacing.unit
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
@@ -45,11 +45,7 @@ class GetAll extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <Typography
-          variant="display2"
-          color="primary"
-          className={classes.title}
-        >
+        <Typography variant="h3" color="primary" className={classes.title}>
           Get All
         </Typography>
         <ExpansionPanel>
@@ -69,9 +65,7 @@ class GetAll extends Component {
             <Typography className={classes.heading}>Example</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            <Typography>
-              <Example data={this.state.data && this.state.data} />
-            </Typography>
+            <Example data={this.state.data && this.state.data} />
           </ExpansionPanelDetails>
         </ExpansionPanel>
       </div>

@@ -7,3 +7,22 @@
 body {
   font-family: "Roboto", sans-serif;
 }
+
+.__json-pretty__ {
+  line-height: 1.3;
+  color: rgba(248, 248, 242, 1);
+  background: #424242;
+  overflow: auto;
+}
+
+.__json-key__ {
+  color: #f96a38;
+}
+
+.__json-value__ {
+  color: #cc00d6;
+}
+
+.__json-string__ {
+  color: #3971e0;
+}

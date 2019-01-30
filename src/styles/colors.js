@@ -1,5 +1,3 @@
-import React from "react";
-
 export const types = [
   { name: "Caregiver", style: { background: "#f16548" } },
   { name: "Creator", style: { background: "#f7921c" } },
