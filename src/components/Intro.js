@@ -22,11 +22,13 @@ const Intro = props => {
           Introduction
         </Typography>
         <Typography component="p">
-          Arc API is a tool for constructing narratives. The system is based on
-          the 12 Jungian Archetypes, described as "universal, archaic patterns
-          that derive from the collective unconscious". <br />
+          Arc API is a tool for constructing narratives. <br />
+          The system is based on the 12 Jungian Archetypes, described as
+          "universal, archaic patterns that derive from the collective
+          unconscious". <br />
           Use this tool to balance personalities, choose the perfect villain,
-          and organize a diverse team of allies. Click on a type below to start.
+          and organize a diverse team of allies. <br />
+          Click on a type below to start.
         </Typography>
       </Paper>
     </div>

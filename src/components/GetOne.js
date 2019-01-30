@@ -69,9 +69,7 @@ class GetOne extends Component {
             <Typography className={classes.heading}>Example</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            <Typography>
-              <Example data={this.state.data} />
-            </Typography>
+            <Example data={this.state.data} />
           </ExpansionPanelDetails>
         </ExpansionPanel>
         <ExpansionPanel>
