@@ -23,6 +23,7 @@ import GetOne from "../../components/GetOne";
 import GetRandom from "../../components/GetRandom";
 // import Images from "../Images";
 import { types } from "../../styles/colors";
+import git from "../../images/github.png";
 
 const drawerWidth = 300;
 
@@ -86,6 +87,22 @@ const styles = theme => ({
   },
   caregiver: {
     background: "#f16548"
+  },
+  git: {
+    height: "3vw",
+    width: "3vw"
+  },
+  toolbar: {
+    display: "flex",
+    justifyContent: "space-between"
+  },
+  link: {
+    display: "flex",
+    textDecoration: "none"
+  },
+  linktext: {
+    color: "white",
+    padding: theme.spacing.unit
   }
 });
 
@@ -140,7 +157,7 @@ class Main extends React.Component {
             [classes.appBarShift]: open
           })}
         >
-          <Toolbar disableGutters={!open}>
+          <Toolbar className={classes.toolbar} disableGutters={!open}>
             <IconButton
               color="inherit"
               aria-label="Open drawer"
@@ -152,6 +169,18 @@ class Main extends React.Component {
             <Typography variant="headline" color="inherit" noWrap>
               Arc API
             </Typography>
+
+            <a
+              href="https://github.com/archetype-api/arc-api"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={classes.link}
+            >
+              <Typography variant="headline" className={classes.linktext}>
+                Find us on Github
+              </Typography>
+              <img src={git} className={classes.git} alt="github" />
+            </a>
           </Toolbar>
         </AppBar>
         <Drawer
