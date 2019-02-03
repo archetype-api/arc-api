@@ -15,19 +15,18 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
+import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import Button from "@material-ui/core/Button";
 import GetAll from "../../components/GetAll";
 import GetOne from "../../components/GetOne";
 import GetRandom from "../../components/GetRandom";
-// import Images from "../Images";
 import { types } from "../../styles/colors";
 import git from "../../images/github.png";
 import Intro from "../Intro";
 import swordblack from "../../images/swordblack.png";
+import SideNav from "./SideNav";
 
-const drawerWidth = 300;
+const drawerWidth = 200;
 
 const styles = theme => ({
   root: {
@@ -66,7 +65,8 @@ const styles = theme => ({
     alignItems: "center",
     padding: "0 8px",
     ...theme.mixins.toolbar,
-    justifyContent: "flex-end"
+    justifyContent: "flex-end",
+    height: "2vh"
   },
   content: {
     flexGrow: 1,
@@ -91,8 +91,9 @@ const styles = theme => ({
     background: "#f16548"
   },
   git: {
-    height: "3vw",
-    width: "3vw"
+    height: "6vh",
+    width: "6vh",
+    marginLeft: "1vw"
   },
   toolbar: {
     display: "flex",
@@ -104,31 +105,29 @@ const styles = theme => ({
   },
   linktext: {
     color: "white",
-    padding: theme.spacing.unit
+    paddingTop: "1vh"
   },
   logo: {
-    height: "2vw",
-    width: "2vw",
-    marginRight: "1vw"
+    height: "6vh",
+    width: "6vh",
+    marginRight: "1vw",
+    paddingTop: ".5vh"
+  },
+  createdby: {
+    paddingLeft: "1vw",
+    fontSize: "1.25em"
+  },
+  authorlink: {
+    fontSize: ".75em",
+    color: theme.palette.primary.main
   }
 });
 
 class Main extends React.Component {
-  state = {
-    open: true,
-    labels: [
-      "Bio",
-      "Intro",
-      "Docs",
-      "Get All",
-      "Get One",
-      "Opponents",
-      "Allies",
-      "Get Random",
-      "Get Dual",
-      "Get Scenario"
-    ]
-  };
+  constructor() {
+    super();
+    this.state = { open: true };
+  }
 
   handleDrawerOpen = () => {
     this.setState({ open: true });
@@ -174,10 +173,19 @@ class Main extends React.Component {
               >
                 <MenuIcon />
               </IconButton>
-              <img src={swordblack} alt="logo" className={classes.logo} />
-              Arc Api
-            </Typography>
 
+              <a
+                href="https://github.com/archetype-api/arc-api"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={this.state.open ? classes.link : classes.hide}
+              >
+                <img src={swordblack} alt="logo" className={classes.logo} />
+                <Typography variant="h5" className={classes.linktext}>
+                  Arc API
+                </Typography>
+              </a>
+            </Typography>
             <a
               href="https://github.com/archetype-api/arc-api"
               target="_blank"
@@ -185,7 +193,7 @@ class Main extends React.Component {
               className={classes.link}
             >
               <Typography variant="h5" className={classes.linktext}>
-                Find us on Github
+                <em>Find us on Github</em>
               </Typography>
               <img src={git} className={classes.git} alt="github" />
             </a>
@@ -210,26 +218,47 @@ class Main extends React.Component {
             </IconButton>
           </div>
           <Divider />
-          <List>
-            {this.state.labels.map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
-            ))}
-          </List>
+          <SideNav />
+
           <Divider />
           <List>
-            {["Maybe", "Split", "Using", "Dividers"].map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
-            ))}
+            <Typography className={classes.createdby}>
+              <em>Created by:</em>
+            </Typography>
+            <ListItem>
+              <ListItemIcon>
+                <AccountCircleIcon />
+                <div>
+                  <Typography className="name">Emmanuel Bravo</Typography>
+                  <a
+                    className={classes.authorlink}
+                    href="https://github.com/khamwas"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    github.com/khamwas
+                  </a>
+                </div>
+              </ListItemIcon>
+              <ListItemText />
+            </ListItem>
+            <ListItem>
+              <ListItemIcon>
+                <AccountCircleIcon />
+                <div>
+                  <Typography className="name">James Sheehan</Typography>
+                  <a
+                    className={classes.authorlink}
+                    href="https://github.com/jmsdevx"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    github.com/jmsdevx
+                  </a>
+                </div>
+              </ListItemIcon>
+              <ListItemText />
+            </ListItem>
           </List>
         </Drawer>
         <main
@@ -240,6 +269,8 @@ class Main extends React.Component {
           <div className={classes.drawerHeader} />
           {/* <Images /> not ready */}
           <Intro />
+          <div id="reference" />
+          <div id="getAll" />
           {buttonDisplay}
           <GetAll theme={this.props.theme} />
           <GetOne theme={this.props.theme} />

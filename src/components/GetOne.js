@@ -52,11 +52,11 @@ class GetOne extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.root}>
+      <div className={classes.root} id="getOne">
         <Typography variant="h3" color="primary" className={classes.title}>
           Get One - {this.props.theme}
         </Typography>
-        <ExpansionPanel>
+        <ExpansionPanel defaultExpanded={true}>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Typography className={classes.heading}>Description</Typography>
           </ExpansionPanelSummary>
@@ -101,7 +101,7 @@ class GetOne extends Component {
             </Paper>
           </ExpansionPanelDetails>
         </ExpansionPanel>
-        <ExpansionPanel>
+        <ExpansionPanel id="shadow">
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Typography className={classes.heading}>Shadow</Typography>
           </ExpansionPanelSummary>
@@ -114,7 +114,7 @@ class GetOne extends Component {
             )}
           </ExpansionPanelDetails>
         </ExpansionPanel>
-        <ExpansionPanel>
+        <ExpansionPanel id="opp">
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Typography className={classes.heading}>Opponents</Typography>
           </ExpansionPanelSummary>
@@ -124,7 +124,7 @@ class GetOne extends Component {
             )}
           </ExpansionPanelDetails>
         </ExpansionPanel>
-        <ExpansionPanel>
+        <ExpansionPanel id="allies">
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Typography className={classes.heading}>Allies</Typography>
           </ExpansionPanelSummary>

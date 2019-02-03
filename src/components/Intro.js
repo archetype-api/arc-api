@@ -8,7 +8,6 @@ const styles = theme => ({
     ...theme.mixins.gutters(),
     paddingTop: theme.spacing.unit * 2,
     paddingBottom: theme.spacing.unit * 2,
-    marginTop: theme.spacing.unit,
     marginBottom: theme.spacing.unit * 2
   }
 });
@@ -21,6 +20,7 @@ const Intro = props => {
         <Typography variant="h5" component="h3">
           Introduction
         </Typography>
+
         <Typography component="p">
           Arc API is a tool for constructing narratives. <br />
           The system is based on the 12 Jungian Archetypes, described as

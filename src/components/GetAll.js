@@ -55,7 +55,7 @@ class GetAll extends Component {
         <Typography variant="h3" color="primary" className={classes.title}>
           Get All
         </Typography>
-        <ExpansionPanel>
+        <ExpansionPanel defaultExpanded={true}>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Typography className={classes.heading}>Description</Typography>
           </ExpansionPanelSummary>
