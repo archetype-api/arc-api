@@ -1,4 +1,5 @@
 import { createMuiTheme } from "@material-ui/core";
+// import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
 
 export const Caregiver = createMuiTheme({
   palette: {
@@ -10,7 +11,8 @@ export const Caregiver = createMuiTheme({
     }
   },
   typography: {
-    useNextVariants: true
+    useNextVariants: true,
+    fontFamiily: "Josefin Sans"
   }
 });
 
@@ -122,7 +124,8 @@ export const Everyperson = createMuiTheme({
     }
   },
   typography: {
-    useNextVariants: true
+    useNextVariants: true,
+    fontFamiily: "/Josefin Sans/"
   }
 });
 

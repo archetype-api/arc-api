@@ -7,6 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import axios from "axios";
 import Example from "./Example";
+import Paper from "@material-ui/core/Paper";
 
 const styles = theme => ({
   root: {
@@ -19,6 +20,12 @@ const styles = theme => ({
   heading: {
     fontSize: theme.typography.pxToRem(15),
     fontWeight: theme.typography.fontWeightRegular
+  },
+  container: {
+    display: "flex"
+  },
+  details: {
+    margin: theme.spacing.unit * 5
   }
 });
 
@@ -53,19 +60,32 @@ class GetAll extends Component {
             <Typography className={classes.heading}>Description</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
-            </Typography>
+            <Typography>Returns all 12 basic archetype objects.</Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
         <ExpansionPanel>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Typography className={classes.heading}>Example</Typography>
           </ExpansionPanelSummary>
-          <ExpansionPanelDetails>
-            <Example data={this.state.data && this.state.data} />
+          <ExpansionPanelDetails className={classes.container}>
+            <Paper className={classes.details} elevation={0}>
+              <Typography>
+                GET:
+                <br />
+                "baseURL/api/types"
+                <br />
+                <br /> Response:
+                <br /> 200
+                <br />
+                <br /> Headers:
+                <br />
+                Content-Type: application/json
+              </Typography>
+            </Paper>
+            <Paper className={classes.details} elevation={0}>
+              <Typography>Body: </Typography>
+              <Example data={this.state.data && this.state.data} />
+            </Paper>
           </ExpansionPanelDetails>
         </ExpansionPanel>
       </div>
