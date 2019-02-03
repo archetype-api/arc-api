@@ -8,6 +8,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import axios from "axios";
 import Example from "./Example";
 import Button from "@material-ui/core/Button";
+import Paper from "@material-ui/core/Paper";
 
 const styles = theme => ({
   root: {
@@ -23,6 +24,9 @@ const styles = theme => ({
   },
   button: {
     marginLeft: theme.spacing.unit * 3
+  },
+  details: {
+    margin: theme.spacing.unit * 5
   }
 });
 
@@ -47,7 +51,7 @@ class GetRandom extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.root}>
+      <div className={classes.root} id="getRandom">
         <Typography variant="h3" color="primary" className={classes.title}>
           Get Random
           <Button
@@ -59,16 +63,12 @@ class GetRandom extends Component {
             Random
           </Button>
         </Typography>
-        <ExpansionPanel>
+        <ExpansionPanel defaultExpanded={true}>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Typography className={classes.heading}>Description</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
-            </Typography>
+            <Typography>Get a random archetype object.</Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
         <ExpansionPanel>
@@ -76,7 +76,24 @@ class GetRandom extends Component {
             <Typography className={classes.heading}>Example</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            <Example data={this.state.data} />
+            <Paper className={classes.details} elevation={0}>
+              <Typography>
+                GET:
+                <br />
+                "baseURL/api/types/random"
+                <br />
+                <br /> Response:
+                <br /> 200
+                <br />
+                <br /> Headers:
+                <br />
+                Content-Type: application/json
+              </Typography>
+            </Paper>
+            <Paper className={classes.details} elevation={0}>
+              <Typography>Body: </Typography>
+              <Example data={this.state.data} />
+            </Paper>
           </ExpansionPanelDetails>
         </ExpansionPanel>
       </div>

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./styles/App.css";
 import Main from "./components/layout/Main";
 import { MuiThemeProvider } from "@material-ui/core";
+import { BrowserRouter } from "react-router-dom";
 import {
   Caregiver,
   Creator,
@@ -59,11 +60,14 @@ class App extends Component {
       }
     })(this.state.theme);
     return (
-      <MuiThemeProvider theme={themeSwitch}>
-        <div>
-          <Main theme={this.state.theme} switchTheme={this.switchTheme} />
-        </div>
-      </MuiThemeProvider>
+      <BrowserRouter>
+        <MuiThemeProvider theme={themeSwitch}>
+          <div>
+            <div id="intro" />
+            <Main theme={this.state.theme} switchTheme={this.switchTheme} />
+          </div>
+        </MuiThemeProvider>
+      </BrowserRouter>
     );
   }
 }

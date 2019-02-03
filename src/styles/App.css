@@ -10,6 +10,10 @@ body {
   font-family: "Josefin Sans", sans-serif;
 }
 
+a:link {
+  text-decoration: none;
+}
+
 .__json-pretty__ {
   line-height: 1.3;
   color: rgba(248, 248, 242, 1);
