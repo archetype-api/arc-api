@@ -1,11 +1,13 @@
 /* @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:100,300,400"); */
+/* @import url("https://fonts.googleapis.com/css?family=Josefin+Sans"); */
+
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .__json-pretty__ {
@@ -20,9 +22,9 @@ body {
 }
 
 .__json-value__ {
-  color: #cc00d6;
+  color: #f202ff;
 }
 
 .__json-string__ {
-  color: #3971e0;
+  color: #60e1e0;
 }
