@@ -17,12 +17,12 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import Button from "@material-ui/core/Button";
-import GetAll from "../../components/GetAll";
-import GetOne from "../../components/GetOne";
-import GetRandom from "../../components/GetRandom";
+import GetAll from "../reference/GetAll";
+import GetOne from "../reference/GetOne";
+import GetRandom from "../reference/GetRandom";
 import { types } from "../../styles/colors";
 import git from "../../images/github.png";
-import Intro from "../Intro";
+import Intro from "./Intro";
 import swordblack from "../../images/swordblack.png";
 import SideNav from "./SideNav";
 
@@ -105,7 +105,8 @@ const styles = theme => ({
   },
   linktext: {
     color: "white",
-    paddingTop: "1vh"
+    paddingTop: "1vh",
+    textDecoration: "underline"
   },
   logo: {
     height: "6vh",
@@ -115,7 +116,8 @@ const styles = theme => ({
   },
   createdby: {
     paddingLeft: "1vw",
-    fontSize: "1.25em"
+    fontSize: "1.25em",
+    textDecoration: "underline"
   },
   authorlink: {
     fontSize: ".75em",
