@@ -30,7 +30,7 @@ class SideNav extends Component {
         { text: "Allies", link: "allies", tag: "sub" },
         { text: "Get Random", link: "getRandom", tag: "head" },
         { text: "Get Dual", link: "getDual", tag: "head" },
-        { text: "Get Scenario", link: "getScenario", tag: "head" }
+        { text: "Get Drama", link: "getDrama", tag: "head" }
       ]
     };
   }
@@ -41,6 +41,7 @@ class SideNav extends Component {
       <List>
         {this.state.labels.map((e, i) => (
           <Link
+            key={i}
             to={`/#${e.link}`}
             scroll={el =>
               el.scrollIntoView({
@@ -50,7 +51,7 @@ class SideNav extends Component {
               })
             }
           >
-            <ListItem button key={e.text}>
+            <ListItem button>
               {/* <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon> */}

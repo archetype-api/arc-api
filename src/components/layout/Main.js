@@ -25,6 +25,8 @@ import git from "../../images/github.png";
 import Intro from "./Intro";
 import swordblack from "../../images/swordblack.png";
 import SideNav from "./SideNav";
+import GetDrama from "../docs/GetDrama";
+import GetDual from "../docs/GetDual";
 
 const drawerWidth = 200;
 
@@ -277,6 +279,12 @@ class Main extends React.Component {
           <GetAll theme={this.props.theme} />
           <GetOne theme={this.props.theme} />
           <GetRandom theme={this.props.theme} />
+          <div id="getDual">
+            <GetDual />
+          </div>
+          <div id="getDrama">
+            <GetDrama />
+          </div>
         </main>
       </div>
     );

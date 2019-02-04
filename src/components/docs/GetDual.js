@@ -8,6 +8,25 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import axios from "axios";
 import Example from "./Example";
 import Paper from "@material-ui/core/Paper";
+import Selector from "../layout/Select";
+
+const suggestions = [
+  { label: "Caregiver" },
+  { label: "Creator" },
+  { label: "Explorer" },
+  { label: "Hero" },
+  { label: "Innocent" },
+  { label: "Jester" },
+  { label: "Lover" },
+  { label: "Magician" },
+  { label: "Everyperson" },
+  { label: "Revolutionary" },
+  { label: "Ruler" },
+  { label: "Sage" }
+].map(suggestion => ({
+  value: suggestion.label,
+  label: suggestion.label
+}));
 
 const styles = theme => ({
   root: {
@@ -21,58 +40,68 @@ const styles = theme => ({
     fontSize: theme.typography.pxToRem(15),
     fontWeight: theme.typography.fontWeightRegular
   },
-  container: {
-    display: "flex"
+  button: {
+    marginLeft: theme.spacing.unit * 3
   },
   details: {
     margin: theme.spacing.unit * 5
   }
 });
 
-class GetAll extends Component {
+class GetDual extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: []
+      data: [],
+      queries: [],
+      multi: ""
     };
   }
 
   componentDidMount() {
-    this.getAll();
+    this.getDual();
   }
 
-  getAll = () => {
+  getDual = () => {
     axios
-      .get("/api/types")
+      .get(`/api/types/dual?primary=`)
       .then(response => this.setState({ data: response.data }))
       .catch(err => console.log(err));
   };
 
+  handleChange = name => value => {
+    this.setState({
+      [name]: value
+    });
+  };
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.root}>
+      <div className={classes.root} id="getRandom">
         <Typography variant="h3" color="primary" className={classes.title}>
-          Get All Archetypes
+          Get Dual Archetype
         </Typography>
         <ExpansionPanel defaultExpanded={true}>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Typography className={classes.heading}>Description</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            <Typography>Returns all 12 basic archetype objects.</Typography>
+            <Typography>
+              Create a combination of two types by using query parameters.
+            </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
+        <Selector suggestions={suggestions} handleChange={this.handleChange} />
         <ExpansionPanel>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Typography className={classes.heading}>Example</Typography>
           </ExpansionPanelSummary>
-          <ExpansionPanelDetails className={classes.container}>
+          <ExpansionPanelDetails>
             <Paper className={classes.details} elevation={0}>
               <Typography>
                 GET:
                 <br />
-                "baseURL/api/types"
+                {"baseURL/api/dual?primary=type&secondary=type"}
                 <br />
                 <br /> Response:
                 <br /> 200
@@ -84,7 +113,7 @@ class GetAll extends Component {
             </Paper>
             <Paper className={classes.details} elevation={0}>
               <Typography>Body: </Typography>
-              <Example data={this.state.data && this.state.data} />
+              <Example data={this.state.data} />
             </Paper>
           </ExpansionPanelDetails>
         </ExpansionPanel>
@@ -93,4 +122,4 @@ class GetAll extends Component {
   }
 }
 
-export default withStyles(styles)(GetAll);
+export default withStyles(styles)(GetDual);
