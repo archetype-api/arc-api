@@ -103,7 +103,8 @@ class GetDual extends Component {
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
-              Create a combination of two types by using query parameters.
+              Create a combination of two types by using primary and secondary
+              queries.
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
