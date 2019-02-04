@@ -53,7 +53,7 @@ class GetAll extends Component {
     return (
       <div className={classes.root}>
         <Typography variant="h3" color="primary" className={classes.title}>
-          Get All
+          Get All Archetypes
         </Typography>
         <ExpansionPanel defaultExpanded={true}>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>

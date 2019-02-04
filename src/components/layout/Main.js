@@ -17,14 +17,16 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import Button from "@material-ui/core/Button";
-import GetAll from "../reference/GetAll";
-import GetOne from "../reference/GetOne";
-import GetRandom from "../reference/GetRandom";
+import GetAll from "../docs/GetAll";
+import GetOne from "../docs/GetOne";
+import GetRandom from "../docs/GetRandom";
 import { types } from "../../styles/colors";
 import git from "../../images/github.png";
 import Intro from "./Intro";
 import swordblack from "../../images/swordblack.png";
 import SideNav from "./SideNav";
+import GetDrama from "../docs/GetDrama";
+import GetDual from "../docs/GetDual";
 
 const drawerWidth = 200;
 
@@ -277,6 +279,12 @@ class Main extends React.Component {
           <GetAll theme={this.props.theme} />
           <GetOne theme={this.props.theme} />
           <GetRandom theme={this.props.theme} />
+          <div id="getDual">
+            <GetDual />
+          </div>
+          <div id="getDrama">
+            <GetDrama />
+          </div>
         </main>
       </div>
     );

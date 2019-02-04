@@ -7,8 +7,27 @@ import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import axios from "axios";
 import Example from "./Example";
-import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
+import Selector from "../layout/Select";
+import Button from "@material-ui/core/Button";
+
+const suggestions = [
+  { label: "Caregiver" },
+  { label: "Creator" },
+  { label: "Explorer" },
+  { label: "Hero" },
+  { label: "Innocent" },
+  { label: "Jester" },
+  { label: "Lover" },
+  { label: "Magician" },
+  { label: "Everyperson" },
+  { label: "Revolutionary" },
+  { label: "Ruler" },
+  { label: "Sage" }
+].map(suggestion => ({
+  value: suggestion.label,
+  label: suggestion.label
+}));
 
 const styles = theme => ({
   root: {
@@ -30,47 +49,66 @@ const styles = theme => ({
   }
 });
 
-class GetRandom extends Component {
+class GetDual extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: []
+      data: [],
+      multi: []
     };
   }
 
   componentDidMount() {
-    this.getRandom();
+    // this.getDual();
   }
 
-  getRandom = () => {
+  getDual = () => {
     axios
-      .get(`/api/types/random`)
+      .get(
+        `/api/types/dual?primary=${this.state.multi[0].label}&secondary=${
+          this.state.multi[1].label
+        }`
+      )
       .then(response => this.setState({ data: response.data }))
       .catch(err => console.log(err));
+  };
+  handleChange = name => value => {
+    this.setState({
+      [name]: value
+    });
   };
   render() {
     const { classes } = this.props;
     return (
       <div className={classes.root} id="getRandom">
         <Typography variant="h3" color="primary" className={classes.title}>
-          Get Random Archetype
+          Get Dual Archetype{" "}
           <Button
             variant="contained"
             className={classes.button}
             color="primary"
-            onClick={this.getRandom}
+            onClick={this.getDual}
           >
-            Random
+            Get Dual
           </Button>
         </Typography>
+        <Selector
+          getDual={this.getDual}
+          suggestions={suggestions}
+          handleChange={this.handleChange}
+        />
         <ExpansionPanel defaultExpanded={true}>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Typography className={classes.heading}>Description</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            <Typography>Get a random archetype object.</Typography>
+            <Typography>
+              Create a combination of two types by using primary and secondary
+              queries.
+            </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
+
         <ExpansionPanel>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Typography className={classes.heading}>Example</Typography>
@@ -80,7 +118,7 @@ class GetRandom extends Component {
               <Typography>
                 GET:
                 <br />
-                "baseURL/api/types/random"
+                {"baseURL/api/types/dual?primary=type&secondary=type"}
                 <br />
                 <br /> Response:
                 <br /> 200
@@ -101,4 +139,4 @@ class GetRandom extends Component {
   }
 }
 
-export default withStyles(styles)(GetRandom);
+export default withStyles(styles)(GetDual);
