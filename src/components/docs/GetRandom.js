@@ -53,7 +53,7 @@ class GetRandom extends Component {
     return (
       <div className={classes.root} id="getRandom">
         <Typography variant="h3" color="primary" className={classes.title}>
-          Get Random
+          Get Random Archetype
           <Button
             variant="contained"
             className={classes.button}

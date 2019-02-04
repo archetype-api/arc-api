@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import classNames from "classnames";
 import Select from "react-select";
 import { withStyles } from "@material-ui/core/styles";
@@ -11,11 +10,12 @@ import Chip from "@material-ui/core/Chip";
 import MenuItem from "@material-ui/core/MenuItem";
 import CancelIcon from "@material-ui/icons/Cancel";
 import { emphasize } from "@material-ui/core/styles/colorManipulator";
+import Button from "@material-ui/core/Button";
 
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    height: 250
+    height: "8vh"
   },
   input: {
     display: "flex",
@@ -202,7 +202,7 @@ class Selector extends React.Component {
             classes={classes}
             styles={selectStyles}
             textFieldProps={{
-              label: "Choose types to combine",
+              label: "Choose types to combine (limit: 2, order matters)",
               InputLabelProps: {
                 shrink: true
               }

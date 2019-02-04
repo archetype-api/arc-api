@@ -9,6 +9,7 @@ import axios from "axios";
 import Example from "./Example";
 import Paper from "@material-ui/core/Paper";
 import Selector from "../layout/Select";
+import Button from "@material-ui/core/Button";
 
 const suggestions = [
   { label: "Caregiver" },
@@ -53,22 +54,24 @@ class GetDual extends Component {
     super(props);
     this.state = {
       data: [],
-      queries: [],
-      multi: ""
+      multi: []
     };
   }
 
   componentDidMount() {
-    this.getDual();
+    // this.getDual();
   }
 
   getDual = () => {
     axios
-      .get(`/api/types/dual?primary=`)
+      .get(
+        `/api/types/dual?primary=${this.state.multi[0].label}&secondary=${
+          this.state.multi[1].label
+        }`
+      )
       .then(response => this.setState({ data: response.data }))
       .catch(err => console.log(err));
   };
-
   handleChange = name => value => {
     this.setState({
       [name]: value
@@ -79,8 +82,21 @@ class GetDual extends Component {
     return (
       <div className={classes.root} id="getRandom">
         <Typography variant="h3" color="primary" className={classes.title}>
-          Get Dual Archetype
+          Get Dual Archetype{" "}
+          <Button
+            variant="contained"
+            className={classes.button}
+            color="primary"
+            onClick={this.getDual}
+          >
+            Get Dual
+          </Button>
         </Typography>
+        <Selector
+          getDual={this.getDual}
+          suggestions={suggestions}
+          handleChange={this.handleChange}
+        />
         <ExpansionPanel defaultExpanded={true}>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Typography className={classes.heading}>Description</Typography>
@@ -91,7 +107,7 @@ class GetDual extends Component {
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
-        <Selector suggestions={suggestions} handleChange={this.handleChange} />
+
         <ExpansionPanel>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Typography className={classes.heading}>Example</Typography>
@@ -101,7 +117,7 @@ class GetDual extends Component {
               <Typography>
                 GET:
                 <br />
-                {"baseURL/api/dual?primary=type&secondary=type"}
+                {"baseURL/api/types/dual?primary=type&secondary=type"}
                 <br />
                 <br /> Response:
                 <br /> 200

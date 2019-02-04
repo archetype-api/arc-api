@@ -52,14 +52,14 @@ class GetDrama extends Component {
     return (
       <div className={classes.root} id="getRandom">
         <Typography variant="h3" color="primary" className={classes.title}>
-          Get Drama
+          Get Dramatic Scenario
         </Typography>
         <ExpansionPanel defaultExpanded={true}>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Typography className={classes.heading}>Description</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            <Typography>Get all dramatic scenario objects.</Typography>
+            <Typography>Get dramatic scenario objects.</Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
         <ExpansionPanel>
