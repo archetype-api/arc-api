@@ -8,6 +8,9 @@ export const Caregiver = createMuiTheme({
       dark: "#a84632",
       main: "#f16548",
       light: "#f3836c"
+    },
+    action: {
+      active: "#f16548"
     }
   },
   typography: {
@@ -23,6 +26,9 @@ export const Creator = createMuiTheme({
       dark: "#ac6613",
       main: "#f7921c",
       light: "#f8a749"
+    },
+    action: {
+      active: "#f7921c"
     }
   },
   typography: {
@@ -37,6 +43,9 @@ export const Explorer = createMuiTheme({
       dark: "#5a5b20",
       main: "#81822e",
       light: "#9a9b57"
+    },
+    action: {
+      active: "#81822e"
     }
   },
   typography: {
@@ -51,6 +60,9 @@ export const Hero = createMuiTheme({
       dark: "#004877",
       main: "#0067ab",
       light: "#3385bb"
+    },
+    action: {
+      active: "#0067ab"
     }
   },
   typography: {
@@ -65,6 +77,9 @@ export const Innocent = createMuiTheme({
       dark: "#007a9a",
       main: "#00afdd",
       light: "#33bfe3"
+    },
+    action: {
+      active: "#00afdd"
     }
   },
   typography: {
@@ -79,6 +94,9 @@ export const Jester = createMuiTheme({
       dark: "#738f27",
       main: "#a5cd39",
       light: "#b7d760"
+    },
+    action: {
+      active: "#a5cd39"
     }
   },
   typography: {
@@ -93,6 +111,9 @@ export const Lover = createMuiTheme({
       dark: "#971f48",
       main: "#d92d68",
       light: "#e05786"
+    },
+    action: {
+      active: "#d92d68"
     }
   },
   typography: {
@@ -107,6 +128,9 @@ export const Magician = createMuiTheme({
       dark: "#651a63",
       main: "#91268e",
       light: "#a751a4"
+    },
+    action: {
+      active: "#91268e"
     }
   },
   typography: {
@@ -121,6 +145,9 @@ export const Everyperson = createMuiTheme({
       dark: "#006369",
       main: "#008e97",
       light: "#33a4ab"
+    },
+    action: {
+      active: "#008e97"
     }
   },
   typography: {
@@ -136,6 +163,9 @@ export const Revolutionary = createMuiTheme({
       dark: "#8f1b27",
       main: "#cd2738",
       light: "#d7525f"
+    },
+    action: {
+      active: "#cd2738"
     }
   },
   typography: {
@@ -150,6 +180,9 @@ export const Ruler = createMuiTheme({
       dark: "#a18005",
       main: "#e7b708",
       light: "#ebc539"
+    },
+    action: {
+      active: "#e7b708"
     }
   },
   typography: {
@@ -164,6 +197,9 @@ export const Sage = createMuiTheme({
       dark: "#5a331e",
       main: "#81492c",
       light: "#9a6d56"
+    },
+    action: {
+      active: "#81492c"
     }
   },
   typography: {
