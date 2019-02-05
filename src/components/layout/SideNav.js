@@ -30,7 +30,9 @@ class SideNav extends Component {
         { text: "Allies", link: "allies", tag: "sub" },
         { text: "Get Random", link: "getRandom", tag: "head" },
         { text: "Get Dual", link: "getDual", tag: "head" },
-        { text: "Get Drama", link: "getDrama", tag: "head" }
+        { text: "Get Drama", link: "getDrama", tag: "head" },
+        { text: "Common", link: "common", tag: "sub" },
+        { text: "Uncommon", link: "uncommon", tag: "sub" }
       ]
     };
   }
@@ -52,9 +54,6 @@ class SideNav extends Component {
             }
           >
             <ListItem button>
-              {/* <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon> */}
               <ListItemText primary={e.text} className={classes[e.tag]} />
             </ListItem>
           </Link>

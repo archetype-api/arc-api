@@ -11,7 +11,7 @@ import Paper from "@material-ui/core/Paper";
 
 const styles = theme => ({
   root: {
-    width: "100%",
+    width: "80vw",
     padding: theme.spacing.unit * 3
   },
   title: {
@@ -87,6 +87,7 @@ class GetDrama extends Component {
             </Paper>
           </ExpansionPanelDetails>
         </ExpansionPanel>
+        <div id="common" />
         <ExpansionPanel>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Typography className={classes.heading}>Common</Typography>
@@ -119,6 +120,7 @@ class GetDrama extends Component {
             </Paper>
           </ExpansionPanelDetails>
         </ExpansionPanel>
+        <div id="uncommon" />
         <ExpansionPanel>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Typography className={classes.heading}>Uncommon</Typography>

@@ -11,7 +11,7 @@ import Paper from "@material-ui/core/Paper";
 
 const styles = theme => ({
   root: {
-    width: "100%",
+    width: "80vw",
     padding: theme.spacing.unit * 3
   },
   title: {
@@ -76,6 +76,7 @@ class GetOne extends Component {
             )}
           </ExpansionPanelDetails>
         </ExpansionPanel>
+
         <ExpansionPanel>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Typography className={classes.heading}>Example</Typography>
@@ -101,7 +102,8 @@ class GetOne extends Component {
             </Paper>
           </ExpansionPanelDetails>
         </ExpansionPanel>
-        <ExpansionPanel id="shadow">
+        <div id="shadow" />
+        <ExpansionPanel>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Typography className={classes.heading}>Shadow</Typography>
           </ExpansionPanelSummary>
@@ -113,8 +115,9 @@ class GetOne extends Component {
               </Typography>
             )}
           </ExpansionPanelDetails>
+          <div id="opp" />
         </ExpansionPanel>
-        <ExpansionPanel id="opp">
+        <ExpansionPanel>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Typography className={classes.heading}>Opponents</Typography>
           </ExpansionPanelSummary>
@@ -123,8 +126,9 @@ class GetOne extends Component {
               <Example data={this.state.data.types.opponents} />
             )}
           </ExpansionPanelDetails>
+          <div id="allies" />
         </ExpansionPanel>
-        <ExpansionPanel id="allies">
+        <ExpansionPanel>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Typography className={classes.heading}>Allies</Typography>
           </ExpansionPanelSummary>

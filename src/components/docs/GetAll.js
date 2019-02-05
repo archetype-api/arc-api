@@ -11,7 +11,7 @@ import Paper from "@material-ui/core/Paper";
 
 const styles = theme => ({
   root: {
-    width: "100%",
+    width: "80vw",
     padding: theme.spacing.unit * 3
   },
   title: {
