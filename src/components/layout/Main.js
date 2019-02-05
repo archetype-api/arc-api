@@ -87,7 +87,7 @@ const styles = theme => ({
     marginLeft: 0
   },
   button: {
-    margin: theme.spacing.unit / 3
+    margin: theme.spacing.unit
   },
   caregiver: {
     background: "#f16548"
