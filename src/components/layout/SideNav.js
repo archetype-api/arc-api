@@ -13,6 +13,9 @@ const styles = theme => ({
   sub: {
     fontSize: ".75em",
     textDecoration: "underline"
+  },
+  ripple: {
+    background: "white"
   }
 });
 
@@ -53,7 +56,7 @@ class SideNav extends Component {
               })
             }
           >
-            <ListItem button>
+            <ListItem button disableTouchRipple divider alignItems={`center`}>
               <ListItemText primary={e.text} className={classes[e.tag]} />
             </ListItem>
           </Link>
