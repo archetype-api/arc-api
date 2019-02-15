@@ -9,6 +9,7 @@ import axios from "axios";
 import Example from "./Example";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
+import Grid from "@material-ui/core/Grid";
 
 const styles = theme => ({
   root: {
@@ -76,24 +77,38 @@ class GetRandom extends Component {
             <Typography className={classes.heading}>Example</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            <Paper className={classes.details} elevation={0}>
-              <Typography>
-                GET:
-                <br />
-                "baseURL/api/types/random"
-                <br />
-                <br /> Response:
-                <br /> 200
-                <br />
-                <br /> Headers:
-                <br />
-                Content-Type: application/json
-              </Typography>
-            </Paper>
-            <Paper className={classes.details} elevation={0}>
-              <Typography>Body: </Typography>
-              <Example data={this.state.data} />
-            </Paper>
+            <Grid container justify="center">
+              <Paper
+                className={classes.details}
+                elevation={0}
+                xs={12}
+                md={6}
+                lg={6}
+              >
+                <Typography>
+                  GET:
+                  <br />
+                  "baseURL/api/types/random"
+                  <br />
+                  <br /> Response:
+                  <br /> 200
+                  <br />
+                  <br /> Headers:
+                  <br />
+                  Content-Type: application/json
+                </Typography>
+              </Paper>
+              <Paper
+                className={classes.details}
+                elevation={0}
+                xs={12}
+                md={6}
+                lg={6}
+              >
+                <Typography>Body: </Typography>
+                <Example data={this.state.data} />
+              </Paper>
+            </Grid>
           </ExpansionPanelDetails>
         </ExpansionPanel>
       </div>

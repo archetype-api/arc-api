@@ -202,7 +202,7 @@ class Selector extends React.Component {
             classes={classes}
             styles={selectStyles}
             textFieldProps={{
-              label: "Choose types to combine (limit: 2, order matters)",
+              label: "Choose TWO types",
               InputLabelProps: {
                 shrink: true
               }

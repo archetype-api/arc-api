@@ -8,6 +8,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import axios from "axios";
 import Example from "./Example";
 import Paper from "@material-ui/core/Paper";
+import { Grid } from "@material-ui/core";
 
 const styles = theme => ({
   root: {
@@ -68,24 +69,38 @@ class GetAll extends Component {
             <Typography className={classes.heading}>Example</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails className={classes.container}>
-            <Paper className={classes.details} elevation={0}>
-              <Typography>
-                GET:
-                <br />
-                "baseURL/api/types"
-                <br />
-                <br /> Response:
-                <br /> 200
-                <br />
-                <br /> Headers:
-                <br />
-                Content-Type: application/json
-              </Typography>
-            </Paper>
-            <Paper className={classes.details} elevation={0}>
-              <Typography>Body: </Typography>
-              <Example data={this.state.data && this.state.data} />
-            </Paper>
+            <Grid container justify="center">
+              <Paper
+                className={classes.details}
+                elevation={0}
+                xs={12}
+                md={6}
+                lg={6}
+              >
+                <Typography>
+                  GET:
+                  <br />
+                  "baseURL/api/types"
+                  <br />
+                  <br /> Response:
+                  <br /> 200
+                  <br />
+                  <br /> Headers:
+                  <br />
+                  Content-Type: application/json
+                </Typography>
+              </Paper>
+              <Paper
+                className={classes.details}
+                elevation={0}
+                xs={12}
+                md={6}
+                lg={6}
+              >
+                <Typography>Body: </Typography>
+                <Example data={this.state.data && this.state.data} />
+              </Paper>
+            </Grid>
           </ExpansionPanelDetails>
         </ExpansionPanel>
       </div>

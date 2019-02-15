@@ -10,6 +10,7 @@ import Example from "./Example";
 import Paper from "@material-ui/core/Paper";
 import Selector from "../layout/Select";
 import Button from "@material-ui/core/Button";
+import Grid from "@material-ui/core/Grid";
 
 const suggestions = [
   { label: "Caregiver" },
@@ -114,24 +115,38 @@ class GetDual extends Component {
             <Typography className={classes.heading}>Example</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            <Paper className={classes.details} elevation={0}>
-              <Typography>
-                GET:
-                <br />
-                {"baseURL/api/types/dual?primary=type&secondary=type"}
-                <br />
-                <br /> Response:
-                <br /> 200
-                <br />
-                <br /> Headers:
-                <br />
-                Content-Type: application/json
-              </Typography>
-            </Paper>
-            <Paper className={classes.details} elevation={0}>
-              <Typography>Body: </Typography>
-              <Example data={this.state.data} />
-            </Paper>
+            <Grid container justify="center">
+              <Paper
+                className={classes.details}
+                elevation={0}
+                xs={12}
+                md={6}
+                lg={6}
+              >
+                <Typography>
+                  GET:
+                  <br />
+                  {"baseURL/api/types/dual?primary=type&secondary=type"}
+                  <br />
+                  <br /> Response:
+                  <br /> 200
+                  <br />
+                  <br /> Headers:
+                  <br />
+                  Content-Type: application/json
+                </Typography>
+              </Paper>
+              <Paper
+                className={classes.details}
+                elevation={0}
+                xs={12}
+                md={6}
+                lg={6}
+              >
+                <Typography>Body: </Typography>
+                <Example data={this.state.data} />
+              </Paper>
+            </Grid>
           </ExpansionPanelDetails>
         </ExpansionPanel>
       </div>
