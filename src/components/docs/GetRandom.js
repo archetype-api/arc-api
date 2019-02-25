@@ -90,7 +90,7 @@ class GetRandom extends Component {
                 <Typography>
                   GET:
                   <br />
-                  "baseURL/api/types/random"
+                  "https://arcapi.org/api/types/random"
                   <br />
                   <br /> Response:
                   <br /> 200
