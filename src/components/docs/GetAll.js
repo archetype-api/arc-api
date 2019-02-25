@@ -12,8 +12,8 @@ import { Grid } from "@material-ui/core";
 
 const styles = theme => ({
   root: {
-    width: "80vw",
-    padding: theme.spacing.unit * 3
+    width: "85vw"
+    // padding: theme.spacing.unit * 3
   },
   title: {
     padding: theme.spacing.unit
@@ -26,7 +26,9 @@ const styles = theme => ({
     display: "flex"
   },
   details: {
-    margin: theme.spacing.unit * 5
+    padding: theme.spacing.unit,
+    overflow: "auto",
+    overflowWrap: "break-word"
   }
 });
 
@@ -53,7 +55,7 @@ class GetAll extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <Typography variant="h3" color="primary" className={classes.title}>
+        <Typography variant="h4" color="primary" className={classes.title}>
           Get All Archetypes
         </Typography>
         <ExpansionPanel defaultExpanded={true}>

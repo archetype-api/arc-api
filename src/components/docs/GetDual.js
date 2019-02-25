@@ -32,8 +32,8 @@ const suggestions = [
 
 const styles = theme => ({
   root: {
-    width: "80vw",
-    padding: theme.spacing.unit * 3
+    width: "85vw"
+    // padding: theme.spacing.unit * 3
   },
   title: {
     padding: theme.spacing.unit
@@ -46,7 +46,9 @@ const styles = theme => ({
     marginLeft: theme.spacing.unit * 3
   },
   details: {
-    margin: theme.spacing.unit * 5
+    padding: theme.spacing.unit,
+    overflow: "auto",
+    overflowWrap: "break-word"
   }
 });
 
@@ -64,14 +66,18 @@ class GetDual extends Component {
   }
 
   getDual = () => {
-    axios
-      .get(
-        `/api/types/dual?primary=${this.state.multi[0].label}&secondary=${
-          this.state.multi[1].label
-        }`
-      )
-      .then(response => this.setState({ data: response.data }))
-      .catch(err => console.log(err));
+    if (this.state.multi[1]) {
+      axios
+        .get(
+          `/api/types/dual?primary=${this.state.multi[0].label}&secondary=${
+            this.state.multi[1].label
+          }`
+        )
+        .then(response => this.setState({ data: response.data }))
+        .catch(err => console.log(err));
+    } else {
+      alert("Please select two archetypes.");
+    }
   };
   handleChange = name => value => {
     this.setState({
@@ -82,7 +88,7 @@ class GetDual extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.root} id="getRandom">
-        <Typography variant="h3" color="primary" className={classes.title}>
+        <Typography variant="h4" color="primary" className={classes.title}>
           Get Dual Archetype{" "}
           <Button
             variant="contained"

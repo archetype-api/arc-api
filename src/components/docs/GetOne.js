@@ -12,8 +12,8 @@ import Grid from "@material-ui/core/Grid";
 
 const styles = theme => ({
   root: {
-    width: "80vw",
-    padding: theme.spacing.unit * 3
+    width: "85vw"
+    // padding: theme.spacing.unit * 3
   },
   title: {
     padding: theme.spacing.unit
@@ -23,7 +23,10 @@ const styles = theme => ({
     fontWeight: theme.typography.fontWeightRegular
   },
   details: {
-    margin: theme.spacing.unit * 3
+    // margin: theme.spacing.unit * 3
+    padding: theme.spacing.unit,
+    overflow: "auto",
+    overflowWrap: "break-word"
   }
 });
 
@@ -54,7 +57,7 @@ class GetOne extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.root} id="getOne">
-        <Typography variant="h3" color="primary" className={classes.title}>
+        <Typography variant="h4" color="primary" className={classes.title}>
           Get One: {this.props.theme}
         </Typography>
         <ExpansionPanel defaultExpanded={true}>

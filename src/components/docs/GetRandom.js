@@ -13,8 +13,8 @@ import Grid from "@material-ui/core/Grid";
 
 const styles = theme => ({
   root: {
-    width: "80vw",
-    padding: theme.spacing.unit * 3
+    width: "85vw"
+    // padding: theme.spacing.unit * 3
   },
   title: {
     padding: theme.spacing.unit
@@ -27,7 +27,9 @@ const styles = theme => ({
     marginLeft: theme.spacing.unit * 3
   },
   details: {
-    margin: theme.spacing.unit * 5
+    padding: theme.spacing.unit,
+    overflow: "auto",
+    overflowWrap: "break-word"
   }
 });
 
@@ -53,7 +55,7 @@ class GetRandom extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.root} id="getRandom">
-        <Typography variant="h3" color="primary" className={classes.title}>
+        <Typography variant="h4" color="primary" className={classes.title}>
           Get Random Archetype
           <Button
             variant="contained"

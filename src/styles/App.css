@@ -19,7 +19,9 @@ a:link {
   background: #424242;
   overflow: auto;
   word-wrap: normal;
-  /* max-width: ; */
+  overflow-wrap: break-word;
+  max-width: 60vw;
+  -webkit-font-smoothing: antialiased;
 }
 
 .__json-key__ {

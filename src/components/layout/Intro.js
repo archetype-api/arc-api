@@ -9,7 +9,7 @@ const styles = theme => ({
     paddingTop: theme.spacing.unit * 2,
     paddingBottom: theme.spacing.unit * 2,
     marginBottom: theme.spacing.unit * 2,
-    marginLeft: theme.spacing.unit * 2,
+    // marginLeft: theme.spacing.unit * 2,
     width: "75vw"
   }
 });

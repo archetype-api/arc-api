@@ -10,7 +10,6 @@ import Chip from "@material-ui/core/Chip";
 import MenuItem from "@material-ui/core/MenuItem";
 import CancelIcon from "@material-ui/icons/Cancel";
 import { emphasize } from "@material-ui/core/styles/colorManipulator";
-import Button from "@material-ui/core/Button";
 
 const styles = theme => ({
   root: {
