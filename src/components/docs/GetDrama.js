@@ -70,7 +70,7 @@ class GetDrama extends Component {
             <Typography className={classes.heading}>Example</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            <Grid container>
+            <Grid container justify="space-evenly">
               <Paper
                 className={classes.details}
                 elevation={0}
@@ -110,7 +110,7 @@ class GetDrama extends Component {
             <Typography className={classes.heading}>Common</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            <Grid container>
+            <Grid container justify="space-evenly">
               <Paper className={classes.details} elevation={0}>
                 <Typography>
                   GET:
@@ -145,7 +145,7 @@ class GetDrama extends Component {
             <Typography className={classes.heading}>Uncommon</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            <Grid container>
+            <Grid container justify="space-evenly">
               <Paper className={classes.details} elevation={0}>
                 <Typography>
                   GET:

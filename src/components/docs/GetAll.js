@@ -71,7 +71,7 @@ class GetAll extends Component {
             <Typography className={classes.heading}>Example</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails className={classes.container}>
-            <Grid container justify="center">
+            <Grid container justify="space-evenly">
               <Paper
                 className={classes.details}
                 elevation={0}

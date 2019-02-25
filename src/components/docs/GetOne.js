@@ -86,7 +86,7 @@ class GetOne extends Component {
             <Typography className={classes.heading}>Example</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            <Grid container justify="center">
+            <Grid container justify="space-evenly">
               <Paper
                 className={classes.details}
                 elevation={0}
@@ -140,9 +140,31 @@ class GetOne extends Component {
             <Typography className={classes.heading}>Opponents</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            {this.state.data.types && (
-              <Example data={this.state.data.types.opponents} />
-            )}
+            <Grid container justify="space-evenly">
+              <Paper
+                className={classes.details}
+                elevation={0}
+                xs={12}
+                md={6}
+                lg={6}
+              >
+                <Typography>
+                  GET:
+                  <br />
+                  {`baseURL/api/opponents/${this.props.theme.toLowerCase()}`}
+                  <br />
+                  <br /> Response:
+                  <br /> 200
+                  <br />
+                  <br /> Headers:
+                  <br />
+                  Content-Type: application/json
+                </Typography>
+              </Paper>
+              {this.state.data.types && (
+                <Example data={this.state.data.types.opponents} />
+              )}
+            </Grid>
           </ExpansionPanelDetails>
           <div id="allies" />
         </ExpansionPanel>
@@ -151,9 +173,31 @@ class GetOne extends Component {
             <Typography className={classes.heading}>Allies</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            {this.state.data.types && (
-              <Example data={this.state.data.types.allies} />
-            )}
+            <Grid container justify="space-evenly">
+              <Paper
+                className={classes.details}
+                elevation={0}
+                xs={12}
+                md={6}
+                lg={6}
+              >
+                <Typography>
+                  GET:
+                  <br />
+                  {`baseURL/api/allies/${this.props.theme.toLowerCase()}`}
+                  <br />
+                  <br /> Response:
+                  <br /> 200
+                  <br />
+                  <br /> Headers:
+                  <br />
+                  Content-Type: application/json
+                </Typography>
+              </Paper>
+              {this.state.data.types && (
+                <Example data={this.state.data.types.allies} />
+              )}
+            </Grid>
           </ExpansionPanelDetails>
         </ExpansionPanel>
       </div>

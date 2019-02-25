@@ -121,7 +121,7 @@ class GetDual extends Component {
             <Typography className={classes.heading}>Example</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            <Grid container justify="center">
+            <Grid container justify="space-evenly">
               <Paper
                 className={classes.details}
                 elevation={0}
