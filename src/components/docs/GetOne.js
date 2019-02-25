@@ -97,7 +97,7 @@ class GetOne extends Component {
                 <Typography>
                   GET:
                   <br />
-                  {`baseURL/api/types/name/${this.props.theme.toLowerCase()}`}
+                  {`https://arcapi.org/api/types/name/${this.props.theme.toLowerCase()}`}
                   <br />
                   <br /> Response:
                   <br /> 200
@@ -151,7 +151,7 @@ class GetOne extends Component {
                 <Typography>
                   GET:
                   <br />
-                  {`baseURL/api/opponents/${this.props.theme.toLowerCase()}`}
+                  {`https://arcapi.org/api/opponents/${this.props.theme.toLowerCase()}`}
                   <br />
                   <br /> Response:
                   <br /> 200
@@ -184,7 +184,7 @@ class GetOne extends Component {
                 <Typography>
                   GET:
                   <br />
-                  {`baseURL/api/allies/${this.props.theme.toLowerCase()}`}
+                  {`https://arcapi.org/api/allies/${this.props.theme.toLowerCase()}`}
                   <br />
                   <br /> Response:
                   <br /> 200
