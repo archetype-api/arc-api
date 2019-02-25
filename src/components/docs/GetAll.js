@@ -8,11 +8,12 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import axios from "axios";
 import Example from "./Example";
 import Paper from "@material-ui/core/Paper";
+import { Grid } from "@material-ui/core";
 
 const styles = theme => ({
   root: {
-    width: "80vw",
-    padding: theme.spacing.unit * 3
+    width: "85vw"
+    // padding: theme.spacing.unit * 3
   },
   title: {
     padding: theme.spacing.unit
@@ -25,7 +26,9 @@ const styles = theme => ({
     display: "flex"
   },
   details: {
-    margin: theme.spacing.unit * 5
+    padding: theme.spacing.unit,
+    overflow: "auto",
+    overflowWrap: "break-word"
   }
 });
 
@@ -52,7 +55,7 @@ class GetAll extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <Typography variant="h3" color="primary" className={classes.title}>
+        <Typography variant="h4" color="primary" className={classes.title}>
           Get All Archetypes
         </Typography>
         <ExpansionPanel defaultExpanded={true}>
@@ -68,24 +71,38 @@ class GetAll extends Component {
             <Typography className={classes.heading}>Example</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails className={classes.container}>
-            <Paper className={classes.details} elevation={0}>
-              <Typography>
-                GET:
-                <br />
-                "baseURL/api/types"
-                <br />
-                <br /> Response:
-                <br /> 200
-                <br />
-                <br /> Headers:
-                <br />
-                Content-Type: application/json
-              </Typography>
-            </Paper>
-            <Paper className={classes.details} elevation={0}>
-              <Typography>Body: </Typography>
-              <Example data={this.state.data && this.state.data} />
-            </Paper>
+            <Grid container justify="space-evenly">
+              <Paper
+                className={classes.details}
+                elevation={0}
+                xs={12}
+                md={6}
+                lg={6}
+              >
+                <Typography>
+                  GET:
+                  <br />
+                  "baseURL/api/types"
+                  <br />
+                  <br /> Response:
+                  <br /> 200
+                  <br />
+                  <br /> Headers:
+                  <br />
+                  Content-Type: application/json
+                </Typography>
+              </Paper>
+              <Paper
+                className={classes.details}
+                elevation={0}
+                xs={12}
+                md={6}
+                lg={6}
+              >
+                <Typography>Body: </Typography>
+                <Example data={this.state.data && this.state.data} />
+              </Paper>
+            </Grid>
           </ExpansionPanelDetails>
         </ExpansionPanel>
       </div>

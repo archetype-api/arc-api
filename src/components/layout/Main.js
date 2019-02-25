@@ -27,6 +27,7 @@ import swordblack from "../../images/swordblack.png";
 import SideNav from "./SideNav";
 import GetDrama from "../docs/GetDrama";
 import GetDual from "../docs/GetDual";
+import { Hidden } from "@material-ui/core";
 
 const drawerWidth = 200;
 
@@ -190,17 +191,19 @@ class Main extends React.Component {
                 </Typography>
               </a>
             </Typography>
-            <a
-              href="https://github.com/archetype-api/arc-api"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={classes.link}
-            >
-              <Typography variant="h5" className={classes.linktext}>
-                <em>Find us on Github</em>
-              </Typography>
-              <img src={git} className={classes.git} alt="github" />
-            </a>
+            <Hidden only={["xs", "sm"]}>
+              <a
+                href="https://github.com/archetype-api/arc-api"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={classes.link}
+              >
+                <Typography variant="h5" className={classes.linktext}>
+                  <em>Find us on Github</em>
+                </Typography>
+                <img src={git} className={classes.git} alt="github" />
+              </a>
+            </Hidden>
           </Toolbar>
         </AppBar>
         <Drawer

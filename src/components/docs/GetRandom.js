@@ -9,11 +9,12 @@ import axios from "axios";
 import Example from "./Example";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
+import Grid from "@material-ui/core/Grid";
 
 const styles = theme => ({
   root: {
-    width: "80vw",
-    padding: theme.spacing.unit * 3
+    width: "85vw"
+    // padding: theme.spacing.unit * 3
   },
   title: {
     padding: theme.spacing.unit
@@ -26,7 +27,9 @@ const styles = theme => ({
     marginLeft: theme.spacing.unit * 3
   },
   details: {
-    margin: theme.spacing.unit * 5
+    padding: theme.spacing.unit,
+    overflow: "auto",
+    overflowWrap: "break-word"
   }
 });
 
@@ -52,7 +55,7 @@ class GetRandom extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.root} id="getRandom">
-        <Typography variant="h3" color="primary" className={classes.title}>
+        <Typography variant="h4" color="primary" className={classes.title}>
           Get Random Archetype
           <Button
             variant="contained"
@@ -76,24 +79,38 @@ class GetRandom extends Component {
             <Typography className={classes.heading}>Example</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            <Paper className={classes.details} elevation={0}>
-              <Typography>
-                GET:
-                <br />
-                "baseURL/api/types/random"
-                <br />
-                <br /> Response:
-                <br /> 200
-                <br />
-                <br /> Headers:
-                <br />
-                Content-Type: application/json
-              </Typography>
-            </Paper>
-            <Paper className={classes.details} elevation={0}>
-              <Typography>Body: </Typography>
-              <Example data={this.state.data} />
-            </Paper>
+            <Grid container justify="space-evenly">
+              <Paper
+                className={classes.details}
+                elevation={0}
+                xs={12}
+                md={6}
+                lg={6}
+              >
+                <Typography>
+                  GET:
+                  <br />
+                  "baseURL/api/types/random"
+                  <br />
+                  <br /> Response:
+                  <br /> 200
+                  <br />
+                  <br /> Headers:
+                  <br />
+                  Content-Type: application/json
+                </Typography>
+              </Paper>
+              <Paper
+                className={classes.details}
+                elevation={0}
+                xs={12}
+                md={6}
+                lg={6}
+              >
+                <Typography>Body: </Typography>
+                <Example data={this.state.data} />
+              </Paper>
+            </Grid>
           </ExpansionPanelDetails>
         </ExpansionPanel>
       </div>

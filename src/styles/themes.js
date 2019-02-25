@@ -16,6 +16,13 @@ export const Caregiver = createMuiTheme({
   typography: {
     useNextVariants: true,
     fontFamiily: "Josefin Sans"
+  },
+  overrides: {
+    MuiButtonBase: {
+      text: {
+        color: "blue" // Some CSS
+      }
+    }
   }
 });
 
