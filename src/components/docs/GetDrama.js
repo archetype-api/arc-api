@@ -81,7 +81,7 @@ class GetDrama extends Component {
                 <Typography>
                   GET:
                   <br />
-                  "https://arcapi.org/api/drama"
+                  "http://arcapi.org/api/drama"
                   <br />
                   <br /> Response:
                   <br /> 200
@@ -115,7 +115,7 @@ class GetDrama extends Component {
                 <Typography>
                   GET:
                   <br />
-                  "https://arcapi.org/api/drama/common"
+                  "http://arcapi.org/api/drama/common"
                   <br />
                   <br /> Response:
                   <br /> 200
@@ -150,7 +150,7 @@ class GetDrama extends Component {
                 <Typography>
                   GET:
                   <br />
-                  "https://arcapi.org/api/drama/uncommon"
+                  "http://arcapi.org/api/drama/uncommon"
                   <br />
                   <br /> Response:
                   <br /> 200

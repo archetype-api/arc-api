@@ -82,7 +82,7 @@ class GetAll extends Component {
                 <Typography>
                   GET:
                   <br />
-                  "https://arcapi.org/api/types"
+                  "http://arcapi.org/api/types"
                   <br />
                   <br /> Response:
                   <br /> 200
