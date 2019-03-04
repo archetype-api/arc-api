@@ -1,6 +1,7 @@
 const express = require("express");
 const db = require("../db/db");
 const { json } = require("body-parser");
+const cors = require("cors");
 const dual = require("./dual");
 const single = require("./single");
 const compare = require("./compare");
@@ -10,6 +11,7 @@ const random = require("./random");
 const app = express();
 app.use(express.static(`${__dirname}/../build`));
 app.use(json());
+app.use(cors());
 
 app.get("/api/test", (req, res) => {
   res.status(200).send({
