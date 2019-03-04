@@ -80,4 +80,3 @@ Axios allowed implementation of promise based http request in combination with e
 
 ### Deployment
 The deployment was completed via Digital Ocean droplet, ssh, pm2, and nginx. 
-
