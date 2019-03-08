@@ -1,3 +1,4 @@
+
 # ArcApi.org
 
 #### a project by James Sheehan & Emmanuel Bravo
@@ -16,8 +17,8 @@ Project started Jan 25, 2019 and completed on Feb 24, 2019.
 
 ## Table of Contents
 
-- [Preplanning](#preplanning) - [Wire-Frame](#wire-frame) - [Schema](#schema)
-- [Main Challenges](#main-challenges) - [1. Developing the System](#developing-the-system) - [2. Dynamic MUI Themes](#dynamic-mui-themes) - [3. Displaying JSON](#react-json-pretty)
+- [Preplanning](#preplanning) - [Wire-Frame](#wire-frame) - [Schema](#schema) - [System](#developing-the-system)
+- [Main Challenges](#main-challenges) - [1. Developing the System](#developing-the-system) - [2. Dynamic MUI Themes](#material-ui) - [3. Displaying JSON](#react-json-pretty)
 - [Technology](#technology) - [Material UI](#material-ui) - [React Router Hash Link](#react-router-hash-link) - [React JSON Pretty](#react-json-pretty) - [React Select](#react-select) - [Express](#express) - [React](#react) - [Axios](#axios) - [Deployment](#deployment)
 
 ## Preplanning
@@ -44,6 +45,25 @@ Our initial data set and api calls are not heavy on computation. So we used a No
   "color": "red"
 }
 ```
+### Developing the System
+Developing the system.
+The initial idea for the system came from developing a wheel that could be manipulated to match up complementary and contrasting archetypes. 
+
+The first wheel came about by aligning all archetypes by their aspect: Ego, Self & Soul. 
+![aspect](https://s3.us-east-2.amazonaws.com/khamwas-readme/aspect.PNG)
+
+The wheel created by these relationships was the first working structure to developing the arcapi system. We were able to begin establishing and discovering what types of relationships worked and were common in fiction based on this layout.
+![wheel](https://s3.us-east-2.amazonaws.com/khamwas-readme/wheel.PNG)
+
+
+After working with the prototype wheel, we found that there were more common factors among archetypes that we attempted to incorporate into our model. The resulted in the framework below. This illustrates Role, Drive, & Method. 3 important pieces of understanding archetypes that we incorporated into our arcapi framework. 
+![role](https://s3.us-east-2.amazonaws.com/khamwas-readme/role.PNG)
+
+
+The final model for our arcapi framework came with the insight that the outlier roles and the soul aspects all occurred in the center of our model. We were able to lay our original mapping of Aspect: Ego, Self & Soul over our new model which resulted in the framework for the final working arcapi. 
+![final](https://s3.us-east-2.amazonaws.com/khamwas-readme/final.PNG)
+
+-The API we have constructed, at its core, is the usage of this model to determine complex relationships among archetypes for analyzing and creating characters. 
 
 ## Technology
 
