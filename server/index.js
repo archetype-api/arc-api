@@ -57,7 +57,7 @@ app.get("/api/drama", drama.allDrama);
 app.get("/api/drama/common", drama.commonDrama);
 app.get("/api/drama/uncommon", drama.uncommonDrama);
 
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
