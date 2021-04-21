@@ -9,7 +9,16 @@ const drama = require("./drama");
 const random = require("./random");
 
 const app = express();
-app.use(express.static(`${__dirname}/client/build`));
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "client/build")));
+  app.get("*", (request, response) => {
+    response.sendFile(path.join(__dirname, "client/build", "index.html"));
+  });
+} else {
+  app.use(express.static(`${__dirname}/../build`));
+}
+
 app.use(json());
 app.use(cors());
 
