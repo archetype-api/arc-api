@@ -9,7 +9,7 @@ const drama = require("./drama");
 const random = require("./random");
 
 const app = express();
-app.use(express.static(`${__dirname}/../build`));
+app.use(express.static(`${__dirname}/../public`));
 app.use(json());
 app.use(cors());
 
