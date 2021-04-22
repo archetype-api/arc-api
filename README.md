@@ -1,5 +1,5 @@
 
-# ArcApi.org
+# https://archetype-api.herokuapp.com/
 
 #### a project by James Sheehan & Emmanuel Bravo
 
