@@ -133,7 +133,7 @@ class GetDual extends Component {
                   GET:
                   <br />
                   {
-                    "http://arcapi.org/api/types/dual?primary=type&secondary=type"
+                    "https://archetype-api.herokuapp.com/api/types/dual?primary=type&secondary=type"
                   }
                   <br />
                   <br /> Response:
