@@ -97,7 +97,7 @@ class GetOne extends Component {
                 <Typography>
                   GET:
                   <br />
-                  {`http://arcapi.org/api/types/name/${this.props.theme.toLowerCase()}`}
+                  {`https://archetype-api.herokuapp.com/api/types/name/${this.props.theme.toLowerCase()}`}
                   <br />
                   <br /> Response:
                   <br /> 200
@@ -151,7 +151,7 @@ class GetOne extends Component {
                 <Typography>
                   GET:
                   <br />
-                  {`http://arcapi.org/api/opponents/${this.props.theme.toLowerCase()}`}
+                  {`https://archetype-api.herokuapp.com/api/opponents/${this.props.theme.toLowerCase()}`}
                   <br />
                   <br /> Response:
                   <br /> 200
@@ -184,7 +184,7 @@ class GetOne extends Component {
                 <Typography>
                   GET:
                   <br />
-                  {`http://arcapi.org/api/allies/${this.props.theme.toLowerCase()}`}
+                  {`https://archetype-api.herokuapp.com/api/allies/${this.props.theme.toLowerCase()}`}
                   <br />
                   <br /> Response:
                   <br /> 200
