@@ -2,6 +2,9 @@
   "name": "arc2",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "6.11.1"
+  },
   "dependencies": {
     "@material-ui/core": "^3.9.1",
     "@material-ui/icons": "^3.0.2",
