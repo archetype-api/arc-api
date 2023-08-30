@@ -82,7 +82,7 @@ class GetAll extends Component {
                 <Typography>
                   GET:
                   <br />
-                  "https://archetype-api.herokuapp.com/api/types"
+                  "http://www.archetype-api.org/api/types"
                   <br />
                   <br /> Response:
                   <br /> 200
