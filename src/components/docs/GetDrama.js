@@ -81,7 +81,7 @@ class GetDrama extends Component {
                 <Typography>
                   GET:
                   <br />
-                  "https://archetype-api.herokuapp.com/api/drama"
+                  "http://www.archetype-api.org/api/drama"
                   <br />
                   <br /> Response:
                   <br /> 200
@@ -115,7 +115,7 @@ class GetDrama extends Component {
                 <Typography>
                   GET:
                   <br />
-                  "https://archetype-api.herokuapp.com/api/drama/common"
+                  "http://www.archetype-api.org/api/drama/common"
                   <br />
                   <br /> Response:
                   <br /> 200
@@ -150,7 +150,7 @@ class GetDrama extends Component {
                 <Typography>
                   GET:
                   <br />
-                  "https://archetype-api.herokuapp.com/api/drama/uncommon"
+                  "http://www.archetype-api.org/api/drama/uncommon"
                   <br />
                   <br /> Response:
                   <br /> 200
